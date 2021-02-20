@@ -1,0 +1,131 @@
+{
+    "name": "Player",
+    "maps": [
+        {
+            "name": "Ship",
+            "id": "086cfd23-8460-4640-8a09-6660ad075e55",
+            "actions": [
+                {
+                    "name": "Accelerate",
+                    "type": "Button",
+                    "id": "16d01734-0839-4d11-8425-0040eecb6084",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Rotate",
+                    "type": "PassThrough",
+                    "id": "8b9e6cc5-cd2e-482f-b2cd-a6bc2d2df106",
+                    "expectedControlType": "Axis",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Claw",
+                    "type": "Button",
+                    "id": "23232f20-a4b7-4d01-8313-18b0e5682c85",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "Laser",
+                    "type": "Button",
+                    "id": "0dadac3d-f316-4e4f-8cd3-404d42261887",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "DubstepGun",
+                    "type": "Button",
+                    "id": "05dd2645-81fc-4861-be77-a5724f323148",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "1c52288f-e18c-4912-9ebc-e39c0255ddbb",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Accelerate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "A/X",
+                    "id": "b2bc1a76-55e7-40c8-854b-f2bb687130a6",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "1a11cf45-6f75-4b49-a0ea-fc334d41f725",
+                    "path": "<Keyboard>/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "9bca28d7-b289-401c-a5e6-aac5df44f021",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "89456544-0d18-4185-9f19-2861ad7c776e",
+                    "path": "<Keyboard>/p",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Claw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c04126bc-813e-4a95-b190-c0e467849d50",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Laser",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6558377a-5234-4aef-a9ee-c149f6045632",
+                    "path": "<Keyboard>/b",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DubstepGun",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
