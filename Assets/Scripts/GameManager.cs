@@ -38,6 +38,14 @@ public class GameManager : MonoBehaviour
       SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name);
     }
 
+    public void ReturnToMenu(){
+      SceneManager.LoadSceneAsync("MainMenu");
+    }
+
+    public void Quit(){
+      Application.Quit();
+    }
+
     private bool hasCollectedAllGems(){
       if(currentGemCount == maxGemCount || currentGemCount > maxGemCount)return true;
       else return false;

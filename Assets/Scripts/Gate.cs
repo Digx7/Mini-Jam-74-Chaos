@@ -21,6 +21,6 @@ public class Gate : MonoBehaviour
     }
 
     public void OnCollisionEnter(Collision col){
-      if(col.gameObject.tag == "Player")PlayerEnteredGate.Invoke();
+      if(col.gameObject.tag == "Player" && gateIsActive)PlayerEnteredGate.Invoke();
     }
 }
