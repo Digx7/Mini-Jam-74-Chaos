@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Ship : MonoBehaviour
 {
     [SerializeField] private float movementSpeed;
     [SerializeField] private float rotationSpeed;
+    [Space]
+    [SerializeField] private UnityEvent LevelCompleted;
     [Space]
     [SerializeField] private Rigidbody rb;
     [SerializeField] private GameObject ClawSpawnObject;
@@ -14,6 +17,9 @@ public class Ship : MonoBehaviour
     [SerializeField] private Transform LaserSpawnPoint;
     [SerializeField] private GameObject DubstepGunSpawnObject;
     [SerializeField] private Transform DubstepGunSpawnPoint;
+    [SerializeField] private GameObject HurtParticles;
+    [SerializeField] private GameObject DeathParticles;
+    [SerializeField] private GameObject GateParticles;
 
     private Vector3 rotationAxis;
     private float rotation;
@@ -32,6 +38,19 @@ public class Ship : MonoBehaviour
 
     public void Rotate(float input){
        rotation = input;
+    }
+
+    public void shipTookDamage(){
+      Instantiate(HurtParticles, this.gameObject.transform.position, Quaternion.identity);
+    }
+
+    public void shipDied(){
+      Instantiate(DeathParticles, this.gameObject.transform.position, Quaternion.identity);
+    }
+
+    public void shipLeft(){
+      Instantiate(GateParticles, this.gameObject.transform.position, Quaternion.identity);
+      LevelCompleted.Invoke();
     }
 
     public void Claw(){

@@ -4,15 +4,24 @@ using UnityEngine;
 
 public class Gem : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
+    [SerializeField] private GameManager gameManager;
+    [SerializeField] private GameObject collectedParticles;
+
+    public void Awake(){
+      if(gameManager == null) gameManager = FindObjectOfType<GameManager>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    public void OnTriggerEnter(Collider col){
+      if(col.gameObject.tag == "PlayerGrab") gemPickedUp();
+    }
+
+    public void OnColliderEnter(Collision col){
+      if(col.gameObject.tag == "PlayerGrab") gemPickedUp();
+    }
+
+    private void gemPickedUp(){
+      gameManager.gemCollected();
+      Instantiate(collectedParticles, this.transform.position, Quaternion.identity);
+      Destroy(this.gameObject);
     }
 }
